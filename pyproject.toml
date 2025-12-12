@@ -17,5 +17,11 @@ dependencies = [
     "scipy",
 ]
 
+[project.optional-dependencies]
+transformers = [
+    "transformers",
+    "torch",
+]
+
 [tool.setuptools]
 packages = ["reservoir_lm"]

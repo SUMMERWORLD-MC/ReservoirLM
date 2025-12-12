@@ -12,3 +12,6 @@ dist/
 # Unit test / coverage reports
 .coverage
 .pytest_cache/
+
+# Log files
+*.log

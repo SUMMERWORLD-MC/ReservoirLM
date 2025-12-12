@@ -25,10 +25,16 @@ ReservoirLM is a Python library for implementing Reservoir Language Models, appl
 
 ## Installation
 
-Currently, the library can be used by cloning the repository. The main dependencies are:
+To get started, clone the repository. The core library requires `numpy` and `scipy`:
 
 ```bash
-pip install numpy scipy
+pip install .
+```
+
+To use Transformer-based models like GPT-2, you need to install the optional dependencies:
+
+```bash
+pip install ".[transformers]"
 ```
 
 ## Quick Start
@@ -85,4 +91,14 @@ probabilities = predictor.predict(last_state)
 print("Vocabulary Size:", vocab_size)
 print("Predicted probabilities shape:", probabilities.shape)
 print("Predicted next token index:", np.argmax(probabilities))
+```
+
+## Transformer Example
+
+The library also includes an example of how to use a pre-trained Transformer model (GPT-2) for text generation using the Hugging Face `transformers` library. This can be useful for comparing the performance and behavior of ReservoirLMs with standard Transformer models.
+
+To run the example, ensure you have installed the optional dependencies as described in the Installation section, then run:
+
+```bash
+python examples/transformer_quick_start.py
 ```
